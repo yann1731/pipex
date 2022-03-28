@@ -9,19 +9,13 @@
 
 int main(int argc, char *argv[])
 {
+	extern char		**environ;
 	char			**exec1;
 	char			**exec2;
-	extern	char	**environ;
-	char			**env;
+	char			**path;
 
-
-	env = strsplit(findpath(environ), ':');
+	path = strsplit(findpath(environ), ':');
 	exec1 = strsplit(argv[2], ' ');
 	exec2 = strsplit(argv[3], ' ');
-	int i;
-
-	i = -1;
-	while (env[++i])
-		printf("%s\n", env[i]);
-	//execute(argv, exec1, exec2, env);
+	execute(argv, exec1, exec2, path);
 }
