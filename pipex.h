@@ -21,3 +21,4 @@ int		ft_strlen(const char *s);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*findpath(char **environ);
 char	*ft_strstr(char *str, char *to_find);
+char	*ft_strjoinfree(char const *s1, char const *s2);

@@ -54,7 +54,7 @@ static int	total_str_len(char const *s1, char const *s2)
 	return (total_len);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoinfree(char const *s1, char const *s2)
 {
 	char		*ns;
 	size_t		start;
@@ -73,5 +73,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	ft_strlcpy(ns, s1, total_str_len(s1, s2) + 1);
 	ft_strlcat(ns, s2, total_str_len(s1, s2) + 1);
+	free((void *)s1);
 	return (ns);
 }
