@@ -1,5 +1,5 @@
-SCRS =		checkargs.c checkoutput.c execute.c main.c strconcat.c strsplit.c substr.c run1.c run2.c \
-			ft_strlen.c ft_strjoin.c findpath.c ft_strstr.c
+SCRS =		checkargs.c checkoutput.c execute.c main.c strsplit.c substr.c run1.c run2.c \
+			ft_strlen.c ft_strjoin.c findpath.c ft_strstr.c checkaccess.c ft_strjoinfree.c
 
 
 OBJS =		${SCRS:.c=.o}

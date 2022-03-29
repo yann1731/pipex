@@ -56,6 +56,7 @@ static int	total_str_len(char const *s1, char const *s2)
 
 char	*ft_strjoinfree(char const *s1, char const *s2)
 {
+	printf("pid ft_strjoinfree: %d\n", getpid());
 	char		*ns;
 	size_t		start;
 	size_t		i;
