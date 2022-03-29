@@ -1,8 +1,8 @@
 #include "pipex.h"
 
-static size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+static int	ft_strlcpy(char *dst, const char *src, int dstsize)
 {
-	size_t	cd;
+	int	cd;
 
 	cd = 0;
 	if (dstsize == 0)
@@ -25,10 +25,10 @@ static size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (cd);
 }
 
-static size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+static int	ft_strlcat(char *dst, const char *src, int dstsize)
 {
-	size_t	start;
-	size_t	count;
+	int	start;
+	int	count;
 
 	start = ft_strlen(dst);
 	count = 0;
@@ -56,7 +56,6 @@ static int	total_str_len(char const *s1, char const *s2)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	printf("pid ft_strjoin: %d\n", getpid());
 	char		*ns;
 
 	if (!s1)

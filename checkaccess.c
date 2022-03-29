@@ -4,10 +4,11 @@ char	*checkaccess(char *cmd, char **path)
 {
 	char	*cmdpath;
 	int		i;
-	int		a;
 
 	i = 0;
 	cmdpath = ft_strjoin(path[i], "/");
+	printf("cmdpath + /: %s\n", cmdpath);
 	cmdpath = ft_strjoinfree(cmdpath, cmd);
-	return (NULL);
+	printf("cmdpath + cmd: %s\n", cmdpath);
+	return (cmdpath);
 }

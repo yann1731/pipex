@@ -2,10 +2,10 @@
 
 int	ft_strlen(const char *s)
 {
-	int count;
+	int i;
 
-	count = -1;
-	while (s[count])
-		++count;
-	return (count);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
