@@ -6,9 +6,14 @@ char	*checkaccess(char *cmd, char **path)
 	int		i;
 
 	i = 0;
-	cmdpath = ft_strjoin(path[i], "/");
-	printf("cmdpath + /: %s\n", cmdpath);
-	cmdpath = ft_strjoinfree(cmdpath, cmd);
-	printf("cmdpath + cmd: %s\n", cmdpath);
-	return (cmdpath);
+	while (path[i])
+	{
+		cmdpath = ft_strjoin(path[i], "/");
+		cmdpath = ft_strjoin(cmdpath, cmd);
+		if (access(cmdpath, F_OK) == 0)
+			return (cmdpath);
+		free(cmdpath);
+		i++;
+	}
+	return (NULL);
 }
