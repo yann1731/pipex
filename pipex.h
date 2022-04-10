@@ -1,9 +1,12 @@
-#include <errno.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <sys/wait.h>
-#include <stdio.h>
+#ifndef PIPEX_H
+# define PIPEX_H
+
+# include <errno.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <sys/wait.h>
+# include <stdio.h>
 
 // open, close, read, write, malloc, free, perror
 // strerror, access, dup, dup2, execve, exit, 
@@ -23,3 +26,5 @@ char	*findpath(char **environ);
 char	*ft_strstr(char *str, char *to_find);
 char	*ft_strjoinfree(char const *s1, char const *s2);
 char	*checkaccess(char *cmd, char **path);
+
+#endif
